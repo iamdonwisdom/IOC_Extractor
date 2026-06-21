@@ -1,21 +1,176 @@
 
+<!DOCTYPE html>
 <html>
 <head>
-<title>IOC Report</title>
+
+<title>IOC Dashboard</title>
+
+<style>
+
+body {
+    background:#121212;
+    color:white;
+    font-family:Arial;
+    margin:20px;
+}
+
+.card {
+    background:#1f1f1f;
+    padding:15px;
+    margin:10px;
+    border-radius:10px;
+}
+
+.high {
+    color:red;
+}
+
+.medium {
+    color:orange;
+}
+
+.low {
+    color:lime;
+}
+
+table {
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td {
+    border:1px solid #444;
+    padding:10px;
+}
+
+input {
+    width:100%;
+    padding:10px;
+    margin-bottom:20px;
+}
+
+</style>
+
+<script>
+
+function searchIOC() {
+
+var input =
+document.getElementById("search");
+
+var filter =
+input.value.toUpperCase();
+
+var table =
+document.getElementById("iocTable");
+
+var tr =
+table.getElementsByTagName("tr");
+
+for(var i=0;i<tr.length;i++) {
+
+var td =
+tr[i].getElementsByTagName("td")[1];
+
+if(td) {
+
+txtValue =
+td.textContent ||
+td.innerText;
+
+tr[i].style.display =
+txtValue.toUpperCase().indexOf(filter) > -1
+? ""
+: "none";
+
+}
+
+}
+
+}
+
+</script>
+
 </head>
+
 <body>
 
-<h1>IOC Extraction Report</h1>
+<h1>IOC Threat Hunting Dashboard</h1>
 
-<h2>Threat Severity: HIGH</h2>
+<div class="card">
 
-<table border="1">
+<h2>
+Threat Severity:
+<span class="high">
+HIGH
+</span>
+</h2>
+
+<p>
+Files Analyzed:
+3
+</p>
+
+</div>
+
+    <div class="card">
+    <h3>IPs</h3>
+    <h1>1</h1>
+    </div>
+    
+    <div class="card">
+    <h3>Domains</h3>
+    <h1>3</h1>
+    </div>
+    
+    <div class="card">
+    <h3>URLs</h3>
+    <h1>1</h1>
+    </div>
+    
+    <div class="card">
+    <h3>Emails</h3>
+    <h1>1</h1>
+    </div>
+    
+    <div class="card">
+    <h3>MD5</h3>
+    <h1>1</h1>
+    </div>
+    
+    <div class="card">
+    <h3>SHA1</h3>
+    <h1>1</h1>
+    </div>
+    
+    <div class="card">
+    <h3>SHA256</h3>
+    <h1>1</h1>
+    </div>
+    
+    <div class="card">
+    <h3>Executables</h3>
+    <h1>1</h1>
+    </div>
+    
+
+<input
+type="text"
+id="search"
+onkeyup="searchIOC()"
+placeholder="Search IOC...">
+
+<table id="iocTable">
+
 <tr>
-<th>IOC Type</th>
-<th>Count</th>
+<th>Type</th>
+<th>Indicator</th>
 </tr>
-<tr><td>IPs</td><td>1</td></tr><tr><td>Domains</td><td>3</td></tr><tr><td>URLs</td><td>1</td></tr><tr><td>Emails</td><td>1</td></tr><tr><td>MD5</td><td>1</td></tr><tr><td>SHA1</td><td>1</td></tr><tr><td>SHA256</td><td>1</td></tr><tr><td>Executables</td><td>1</td></tr>
+
+<tr><td>IP</td><td>185.220.101.45</td></tr><tr><td>Domain</td><td>evil-login.com</td></tr><tr><td>Domain</td><td>payload.exe</td></tr><tr><td>Domain</td><td>steal.php</td></tr><tr><td>URL</td><td>http://evil-login.com/steal.php</td></tr><tr><td>Email</td><td>attacker@evil-login.com</td></tr><tr><td>MD5</td><td>5d41402abc4b2a76b9719d911017c592</td></tr><tr><td>SHA1</td><td>2fd4e1c67a2d28fced849ee1bb76e7391b93eb12</td></tr><tr><td>SHA256</td><td>d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592</td></tr><tr><td>Executable</td><td>payload.exe</td></tr>
+
 </table>
 
 </body>
 </html>
+

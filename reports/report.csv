@@ -1,8 +1,8 @@
 IOC Type,Value
 IP,185.220.101.45
-Domain,steal.php
-Domain,payload.exe
 Domain,evil-login.com
+Domain,payload.exe
+Domain,steal.php
 URL,http://evil-login.com/steal.php
 Email,attacker@evil-login.com
 MD5,5d41402abc4b2a76b9719d911017c592
