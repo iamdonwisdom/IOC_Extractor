@@ -58,11 +58,17 @@ Overall Risk Level: HIGH
 
 ## Screenshots
 
-### Dashboard
+### Source Code
+![Code](screenshots/code.png)
+
+### Threat Hunting Summary
+![Output](screenshots/output.png)
+
+### IOC Dashboard
 ![Dashboard](screenshots/dashboard.png)
 
-### Terminal Output
-![Output](screenshots/output.png)
+### Search & Filter Functionality
+![Search](screenshots/search.png)
 
 ### GitHub Repository
 ![GitHub](screenshots/github.png)
@@ -72,3 +78,4 @@ Overall Risk Level: HIGH
 Ede Chidozie Philip
 
 GitHub: https://github.com/iamdonwisdom
+
