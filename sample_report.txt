@@ -1,0 +1,24 @@
+Security Incident Report
+
+Attacker IP: 185.220.101.45
+
+Malicious Domain:
+evil-login.com
+
+Suspicious URL:
+http://evil-login.com/steal.php
+
+Email:
+attacker@evil-login.com
+
+MD5:
+5d41402abc4b2a76b9719d911017c592
+
+SHA1:
+2fd4e1c67a2d28fced849ee1bb76e7391b93eb12
+
+SHA256:
+d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592
+
+File:
+payload.exe
